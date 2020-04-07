@@ -1,0 +1,160 @@
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  #nav {
+    .nav-bar {
+      flex-wrap: wrap;
+      * {
+        margin: 0.3rem;
+      }
+    }
+  }
+
+  .container {
+    margin: 0 2rem;
+  }
+}
+ 
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+  #nav {
+    .nav-bar {
+      flex-wrap: wrap;
+      * {
+        margin: 0.3rem;
+      }
+    }
+  }
+
+  .container {
+    margin: 0 3rem;
+  }
+}
+ 
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+  #nav {
+    .nav-bar {
+      flex-wrap: wrap;
+      * {
+        margin: 0.3rem;
+      }
+    }
+  }
+
+  .container {
+    margin: 0 2rem;
+  }
+}
+ 
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+
+  .container {
+    margin: 0 14rem;
+  }
+}
+ 
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+
+  .container {
+    margin: 0 10rem;
+  }
+}
+ 
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+
+  .container {
+    margin: 0 7rem;
+  }
+}
+ 
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+  #nav {
+    padding: 30px;
+    a {
+      font-weight: bold;
+      color: #2c3e50;
+      margin: 0.3rem;
+
+      &.router-link-exact-active {
+        color: #42b983;
+      }
+    }
+  }
+
+  .container {
+    margin: 0 14rem;
+  }
+}
+ 
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+  
+
+  .container {
+    margin: 0 14rem;
+  }
+}
+ 
+/* iPhone 5 (portrait &amp; landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+  #nav {
+    .nav-bar {
+      flex-wrap: wrap;
+      * {
+        margin: 0.3rem;
+      }
+    }
+  }
+
+}
+ 
+/* iPhone 5 (landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+  #nav {
+    .nav-bar {
+      flex-wrap: wrap;
+      * {
+        margin: 0.3rem;
+      }
+    }
+  }
+
+}
+ 
+/* iPhone 5 (portrait)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+  #nav {
+    .nav-bar {
+      flex-wrap: wrap;
+      * {
+        margin: 0.3rem;
+      }
+    }
+  }
+
+}
