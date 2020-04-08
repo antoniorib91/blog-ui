@@ -2,13 +2,15 @@
   <div class="pub">
     <Title klass="left" size="medium">{{ publication.title }}</Title> 
     <Title klass="left">
-      <label @click="handleClick('filterByAuthor')">{{ publication.metadata.author.name }}</label> -
-      <label @click="handleClick('filterByDate')">{{ publication.metadata.publishedAt | formattedDate }}</label>
+      <label @click="handleClick()">{{ publication.metadata.author.name }}</label> -
+      <label >{{ publication.metadata.publishedAt | formattedDate }}</label>
     </Title>
     <hr>
     <div class="text-box">
-      <p class="line-clamp">{{ publication.body }}</p>
+      <p :class="['line-clamp', publicationsSize() === 1 ? 'no-clamp': '' ]">{{ publication.body }}</p>
     </div>
+    <a href="javascript:void(0);" class="see-more" v-if="publicationsSize() !== 1" @click="handleClickSeeMore()">See more...</a>
+    <a href="javascript:void(0);" class="see-more" v-if="publicationsSize() === 1" @click="handleClickGoBack()">Go back</a>
   </div>
 </template>
 
@@ -28,17 +30,23 @@ export default class Publication extends Vue {
   @Prop()
   public publication!: IPublicationView;
 
-  public handleClick(value: string) {
-    value === 'filterByAuthor' ? this.handleClickFilterByAuthor() : this.handleClickFilterByDate();
+  public publicationsSize() {
+    return this.$store.getters.filteredPublicationsSize;
   }
 
-  private handleClickFilterByDate() {
-    this.$emit('filter', ['date', this.publication.metadata.publishedAt]);
+  public handleClick() {
+    this.$store.dispatch('filterPublications', { type: 'author', value: this.publication.metadata.author.name })
+    this.$store.dispatch('changeFiltered', true);
   }
 
-  private handleClickFilterByAuthor() {
-    this.$emit('filter', ['author', this.publication.metadata.author.name]);
+  public handleClickSeeMore() {
+    this.$store.dispatch('filterPublications', { type: 'byId', value: this.publication.id })
   }
+
+  public handleClickGoBack() {
+    this.$store.dispatch('clearFilter');
+  } 
+
 }
 </script>
 
@@ -56,7 +64,15 @@ export default class Publication extends Vue {
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 5;
       overflow: hidden;
+
+      &.no-clamp {
+        -webkit-line-clamp: unset;
+      }
     }
+  }
+
+  .see-more {
+    float: left;
   }
 }
 </style>
