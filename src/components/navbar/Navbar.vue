@@ -2,11 +2,7 @@
   <div id="nav">
     <div class="nav-bar">
       <div class="nav-title">
-        <Title size="medium" :inline="true" >Blog - Ui</Title>
-      </div>
-      <div class="nav-links">
-        <router-link to="/">Publications</router-link> |
-        <router-link to="/sumary">Sumary</router-link>
+        <Title size="large" :inline="true" >Blog - Ui</Title>
       </div>
     </div>
     <div>
@@ -16,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
 import Filters from '@/components/navbar/Filters.vue';
 import Title from '@/components/Title.vue';
 @Component({
@@ -30,7 +26,7 @@ export default class Navbar extends Vue {}
 
 <style scoped lang="scss">
   @import '@/assets/scss/variables.scss';
-
+  
   #nav {
   .nav-bar {
     display: flex;

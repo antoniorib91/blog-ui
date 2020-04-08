@@ -25,6 +25,14 @@ and (min-width : 321px) {
         margin: 0.3rem;
       }
     }
+
+    .filter {
+      display: flex;
+      flex-direction: column;
+      .author-input {
+        margin: 0.5rem 1rem;
+      }
+    }
   }
 
   .container {
@@ -42,6 +50,14 @@ and (max-width : 320px) {
         margin: 0.3rem;
       }
     }
+
+    .filter {
+      display: flex;
+      flex-direction: column;
+      .author-input {
+        margin: 0.5rem 1rem;
+      }
+    }
   }
 
   .container {
@@ -54,8 +70,29 @@ and (max-width : 320px) {
 and (min-device-width : 768px)
 and (max-device-width : 1024px) {
 
+  .filter {
+    display: block;
+    .author-input {
+      margin: 0.5rem 7rem !important;
+    }
+  }
+
   .container {
     margin: 0 14rem;
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    
+      .content-publications {
+        flex-basis: 77%;
+      }
+    
+      .content-sumary {
+        flex-basis: 20%;
+      }
+    }
   }
 }
  
@@ -64,9 +101,30 @@ and (max-device-width : 1024px) {
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : landscape) {
+  
+  .filter {
+    display: block;
+    .author-input {
+      margin: 0.5rem 7rem;
+    }
+  }
 
   .container {
     margin: 0 10rem;
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    
+      .content-publications {
+        flex-basis: 77%;
+      }
+    
+      .content-sumary {
+        flex-basis: 20%;
+      }
+    }
   }
 }
  
@@ -76,8 +134,29 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : portrait) {
 
+  .filter {
+    display: block;
+    .author-input {
+      margin: 0.5rem 7rem;
+    }
+  }
+
   .container {
     margin: 0 7rem;
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    
+      .content-publications {
+        flex-basis: 77%;
+      }
+    
+      .content-sumary {
+        flex-basis: 20%;
+      }
+    }
   }
 }
  
@@ -88,27 +167,67 @@ and (min-width : 1224px) {
     padding: 30px;
     a {
       font-weight: bold;
-      color: #2c3e50;
       margin: 0.3rem;
 
       &.router-link-exact-active {
         color: #42b983;
       }
     }
+
+    .filter {
+      display: block;
+      .author-input {
+        margin: 0.5rem 1rem;
+      }
+    }
   }
+
 
   .container {
     margin: 0 14rem;
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    
+      .content-publications {
+        flex-basis: 80%;
+      }
+    
+      .content-sumary {
+        flex-basis: 20%;
+      }
+    }
   }
 }
  
 /* Large screens ----------- */
 @media only screen
 and (min-width : 1824px) {
+  .filter {
+    display: block;
+    .author-input {
+      margin: 0.5rem 1rem;
+    }
+  }
   
-
   .container {
     margin: 0 14rem;
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    
+      .content-publications {
+        flex-basis: 80%;
+      }
+    
+      .content-sumary {
+        flex-basis: 20%;
+      }
+    }
   }
 }
  
@@ -121,6 +240,14 @@ and (max-device-width : 568px) {
       flex-wrap: wrap;
       * {
         margin: 0.3rem;
+      }
+    }
+
+    .filter {
+      display: flex;
+      flex-direction: column;
+      .author-input {
+        margin: 0.5rem 1rem;
       }
     }
   }
@@ -139,6 +266,14 @@ and (orientation : landscape) {
         margin: 0.3rem;
       }
     }
+
+    .filter {
+      display: flex;
+      flex-direction: column;
+      .author-input {
+        margin: 0.5rem 1rem;
+      }
+    }
   }
 
 }
@@ -153,6 +288,14 @@ and (orientation : portrait) {
       flex-wrap: wrap;
       * {
         margin: 0.3rem;
+      }
+    }
+
+    .filter {
+      display: flex;
+      flex-direction: column;
+      .author-input {
+        margin: 0.5rem 1rem;
       }
     }
   }
