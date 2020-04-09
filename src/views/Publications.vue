@@ -10,7 +10,6 @@
         <Summary></Summary>
       </div>
     </div>
-      
   </Container>
 </template>
 
@@ -36,10 +35,6 @@ import { AxiosResponse } from 'axios';
 })
 export default class Publications extends Vue {
 
-  public filtered = false;
-
-  private httpClient: HttpClient = new HttpClient();
-
   get publications(): Array<IPublicationView> {
     return this.$store.getters.filteredPublications;
   }
@@ -49,13 +44,13 @@ export default class Publications extends Vue {
   }
 
   private getPublications() {
-    this.httpClient.getPublications()
+    HttpClient.getPublications()
     .then(this.handleResponse)
     .catch(this.handleResponseError);
   }
 
   private getAuthors(values: Array<IPublication>) {
-    this.httpClient.getAuthors()
+    HttpClient.getAuthors()
     .then(res => this.handleResponseAuthors(res, values))
     .catch(this.handleResponseError);
   }
