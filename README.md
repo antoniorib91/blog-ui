@@ -51,7 +51,7 @@ para instalar as dependencias do projeto, logo após a instalação for concluí
 comando para rodar o servidor:
 
 ```
-npm run serve
+npm run start
 ```
 
 ### Runing unit tests
@@ -61,7 +61,7 @@ npm run serve
 rodar o comando:
 
 ```
-npm run test:unit
+npm run test
 ```
 
 ### Runing Compiled for Production local
